@@ -1,0 +1,4 @@
+class ApiResponseWrapper {
+  status = "";
+  data = {}
+}

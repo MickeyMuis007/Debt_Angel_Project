@@ -1,0 +1,38 @@
+# version: "2"
+# services:
+#   app:
+#     container_name: app
+#     restart: always
+#     build: .
+#     ports:
+#       - "3000:3000"
+#     links:
+#       - mongo
+#   mongo:
+#     container_name: mongo
+#     image: mongo
+#     volumes:
+#       - ./data:/data/db
+#     ports:
+#       - "27017:27017"
+
+
+version: '3'
+services:
+  api:
+    image: mickeymuis007/debt-angel-api
+    build: .
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+
+  web-cli:
+    image: mickeymuis007/debt-angel-api
+    networks:
+      - backend
+    command: sh
+
+networks:
+  backend:
+    driver: bridge

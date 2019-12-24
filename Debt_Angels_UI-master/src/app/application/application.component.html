@@ -1,0 +1,93 @@
+<div class="container">
+  <!---ToDO: Remove br-->
+    <br><br><br><br><br><br><br><br>
+
+  <div class="mt-4"></div>
+  <div class="mt-4"></div>
+  <h4 class="mt-h4 text-center">Apply for Debt Solution</h4>
+  <h6 class="mt-h6 text-center">Your information will only be shared with Debt Angels.</h6>
+  <hr>
+
+  <div class="row">
+    <div class="col-2"></div>
+
+    <div class="col-8">
+      <div class="mt-4"></div>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="FirstName">
+          <mat-hint>First name on your ID</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input matInput placeholder="MiddleName">
+          <mat-hint>Second name on your ID. This is optional.</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name">
+          <mat-hint>Last name on your ID (Surname).</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput placeholder="Phone Number">
+          <mat-hint>Phone number.</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Alternative Phone Number</mat-label>
+          <input matInput placeholder="Alternative Phone Number">
+          <mat-hint>Alternative Phone Number incase we don't reach you on your primary phone.</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email">
+          <mat-hint>Email.</mat-hint>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <form class="example-container">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Prefered Method of Communication (How you want to be contacted)"
+            aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" class="btn btn-block">
+            Submit
+          </button>
+        <div class="mt-4"></div>
+        <div class="mt-4"></div>
+      </form><br>
+
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+</div>

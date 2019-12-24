@@ -1,0 +1,116 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.header {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.max-width {
+    width:100%
+ }
+
+/*Material*/
+.angel-blue {
+    background-color: #3f51b5;
+}
+
+.mat-theme-dark {
+    background-color: #30375f !important;
+}
+
+html {
+    /* background: url(../assets/images/northfolk-1213051-unsplash.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    background-color: white;
+}
+
+/*Custom CSS*/
+
+/*Material*/
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.example-container > * {
+    width: 100%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.example-container > * {
+    width: 100%;
+}
+
+/*Material*/
+.mat-card-blue {
+    background-color: #3f51b5;
+}
+
+ @media (min-width: 768px) {
+    .h-md-100 { height: 100vh; }
+}
+.btn-round { border-radius: 30px; }
+.bg-indigo { background: indigo; }
+.text-cyan { color: #35bdff; }
+
+
+#landing-div {
+    background: url("../assets/images/northfolk-1213051-unsplash.jpg") no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    text-shadow: 3px 3px white;
+}
+
+#info-div {
+    background: url("../assets/images/fabian-blank-78637-unsplash.jpg") no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    text-shadow: 3px 3px white; 
+    width: 40%;
+}
+
+#info-div2 {
+    background: url("../assets/images/photo-1507050460691-db9ce53a4539.jpg") no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    text-shadow: 3px 3px white; 
+}
+
+.container-custom {
+    display:flex;
+    align-items:space-between;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    
+  }
+
+  .card-custom {
+    width:22.5%; 
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+  }
+  
+  

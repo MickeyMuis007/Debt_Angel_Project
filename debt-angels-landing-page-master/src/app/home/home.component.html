@@ -1,0 +1,108 @@
+<div class="d-md-flex">
+  <!-- First Half -->
+  <div id="landing-div" class="col-md-6 animated rotateIn">
+    <div class="d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+      <div class="logoarea pt-5 pb-5 animated rotateIn">
+        <h1 class="text-center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Debt
+          Angel</h1>
+        <h5 class="text-center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Your
+          trusted debt solutions provider.</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Half -->
+  <div class="col-md-6 bg-white animated zoomInRight">
+    <div class="d-md-flex justify-content-center">
+
+      <div class="col-sm-8">
+        <form #leadForm="ngForm" (ngSubmit)="onSubmit(leadForm)"
+          class="example-container form-inline justify-content-center" [formGroup]="registrationFormGroup"
+          autocomplete="off">
+
+          <br><br><br>
+          <h1 class="text-center animated rubberBand infinite mb-5">Apply for debt solution</h1>
+
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="FirstName" class="text-center" formControlName="firstName">
+            <mat-hint>Required! First name on your ID</mat-hint>
+            <mat-error *ngIf="hasError('firstName', 'required')">First name is required.</mat-error>
+            <mat-error *ngIf="hasError('firstName', 'minlength')">Should be more than 2 characters.</mat-error>
+          </mat-form-field>
+          <br>
+
+          <!-- <mat-form-field appearance="outline">
+            <mat-label>Middle Name</mat-label>
+            <input matInput placeholder="MiddleName" class="text-center" formControlName="middleName">
+            <mat-hint>Second name on your ID. This is optional.</mat-hint>
+          </mat-form-field>
+          <br> -->
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" class="text-center" formControlName="lastName">
+            <mat-hint>Required! Last Name on your ID.</mat-hint>
+            <mat-error *ngIf="hasError('lastName', 'required')">Last name is required.</mat-error>
+            <mat-error *ngIf="hasError('lastName', 'minlength')">Should be more than 2 charaters.</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Phone Number" class="text-center" formControlName="phoneNumber">
+            <mat-hint>Required! Valid South African phone number.</mat-hint>
+            <mat-error *ngIf="hasError('phoneNumber', 'required')">Phone number is required.</mat-error>
+            <mat-error *ngIf="hasError('phoneNumber', 'pattern')">Should be a valid South African phone number.</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Alternative Phone Number</mat-label>
+            <input matInput placeholder="Alternative Phone Number" class="text-center"
+              formControlName="alternativePhoneNumber">
+            <mat-hint>Alternative South African phone number incase we don't reach you on your primary phone.</mat-hint>
+            <mat-error *ngIf="hasError('alternativePhoneNumber', 'pattern')">Should be a valid South African phone number</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" class="text-center" formControlName="email">
+            <mat-hint>Required! Email.</mat-hint>
+            <mat-error *ngIf="hasError('email', 'required')">Email is required.</mat-error>
+            <mat-error *ngIf="hasError('email', 'email')">Invalid email.</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Prefered Method of Communication (How you want to be contacted)"
+              aria-label="Number" matInput [matAutocomplete]="auto" formControlName="methodOfCommunication">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-hint>How you would prefer to be contacted.</mat-hint>
+          </mat-form-field>
+          <br>
+
+          <a href="../assets/Privacy policy.docx" download>Download terms and conditions</a>
+          <div class="checkbox">
+            <h4 class="mat-h4"><input class="form-control" type="checkbox" value="" formControlName="termsAndCondition">Accept Terms & Conditions.</h4>
+          </div>
+          <br>
+          <script type="text/javascript"
+          src="https://display.tmginteractive.com/generateplacementscript.aspx?
+          placement=17910500&publisher=787995&affid=&subid=&redirect="></script>
+          <button mat-raised-button class="angel-blue" [disabled]="!registrationFormGroup.valid || isLoading"
+            class="btn btn-block" type="submit">
+            <span *ngIf="isLoading" class="spinner-grow spinner-grow-sm mr-2" role="status" aria-hidden="true"></span>Apply for debt solution
+          </button>
+          <br>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
